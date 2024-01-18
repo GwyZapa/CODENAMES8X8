@@ -1,0 +1,64 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #gameBoard {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    width: 120px; /* Width of cards */
+    height: 90px; /* Height of cards */
+    border: 0px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .red { background-color: rgb(221, 99, 99); }
+  .blue { background-color: rgb(99, 136, 221); }
+  .black { background-color: rgb(68, 68, 68); }
+  .white { background-color: rgb(216, 213, 147) }
+  
+  #newGameButton {
+    display: block;
+    margin-top: 20px;
+    width: 200px;
+    height: 100px;
+    font-size: 34px;
+    border: 0px;
+    background-color: antiquewhite;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+
+
+
+
+  @media (max-width: 768px) {
+    #gameBoard {
+      grid-gap: 5px; /* Smaller gap */
+    }
+    
+    .card {
+      width: 10vw; /* Smaller width based on viewport width */
+      height: 7.5vw; /* Height adjusted to maintain the aspect ratio */
+    }
+  
+    #newGameButton {
+      width: 50vw; /* Adjust button width based on viewport width */
+      height: 10vw; /* Adjust button height based on viewport width */
+      font-size: 5vw; /* Adjust font size based on viewport width */
+      margin-top: 5vw; /* Adjust top margin based on viewport width */
+    }
+  }
